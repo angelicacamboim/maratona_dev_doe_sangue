@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOE</title>
+    <title>Doe Sangue</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
+  <header>  
+    <img src="logo.png" alt="Doe sangue" class="logo">
+    <h2>A sua doação importa</h2>
+    <p>Até 3 vidas com 1 doação</p>
+    <p>Mais de 38.000 doações são necessárias todos os dias</p>
+    <p>Apenas 1,9% da população brasileira, doa sangue.</p>
+    <button>Quero ajudar</button>
+  </header>
+
+  <section class="form hide">
+    <h2>Entre na lista de doadores</h2>
+    <form action="/">
+        <input type="text" name="name" placeholder="Nome Completo">
+        <input type="text" name="email" placeholder="E-mail">
+        <input type="text" name="blood" placeholder="Tipo sanguineo">
+        <button>Quero ajudar</button>
+    </form>
+  </section>
+
+  <main>
+    <h2>Ultimos <span>doadores</span></h2>
+
+    <section class="donors">
+        <div class="donor">
+            <div class="blood">AB+</div>
+            <p>Nome</p>
+        </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Desenvolvido por Angel
+  </footer>
     
+  <script src="scripts.js"></script>
 </body>
 </html>

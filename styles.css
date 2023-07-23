@@ -1,0 +1,203 @@
+* {
+     /* corrigindo comportamento padrão css do padding/width */
+     box-sizing: border-box;
+}
+
+:root {
+    --whiteColor: #f9f9f9;
+    --redColor: #ff4f4f;
+    --BlackColor: #000000cc;
+    --bloodColor: #ff4f4f11;
+  }
+  
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    /*Fonte*/
+    font-family: 'Roboto', sans-serif;
+
+    background-color: var(--whiteColor);
+}
+
+/* Titulos */
+header h1, main h2 {
+    margin-bottom: 70px;
+
+}
+
+h1, h2 {
+    color: var(--BlackColor);
+}
+
+main h2 span{
+    color: var(--redColor);
+
+}
+
+.form h2 {
+    text-align: right;
+    color: var(--whiteColor);
+    font-size: 18px;
+}
+
+header, main, footer {
+    text-align: center;
+}
+
+
+header, .form, main {
+    /* espaçamentos com margin: 0 auto 70px auto */
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 70px;
+    margin-left: auto;
+
+
+    /*limites dos elementos da pagina*/
+    width: 90%;
+    max-width: 500px;
+}
+
+ /*Header*/
+header button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+
+    background-color: var(--redColor);
+    color: var(--whiteColor);
+
+    font-weight: bold;
+}
+
+header .logo {
+    width: 120px;
+    margin: 50px 0;
+}
+
+header p {
+    font-size: 16px;
+}
+
+ /*Form*/
+
+section.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 45px;
+
+    align-items: center;
+
+    background-color: var(--redColor);
+
+    padding: 16px 64px;
+
+    border-radius: 6px;
+
+}
+
+form input, 
+form button {
+    /* largura*/
+    width: 100%;
+
+    /* espaçamento */
+    margin-bottom: 4px;
+
+ /* preenchimento - padding: 8px 16px */
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+
+     /* bordas -  border-radius: 4px */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    border: 1px var(--whiteColor) solid;
+}
+
+form input {
+    background-color: transparent;
+}
+
+form input::placeholder{
+    color: var(--whiteColor);
+}
+
+form button {
+    font-weight: bold;
+}
+
+/*Main*/
+
+main .donors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+
+
+main .blood {
+    color: var(--redColor);
+    font-weight: bold;
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+}
+
+main .blood::before {
+    content: "";
+    background-color: var(--bloodColor);
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+
+    /*fazer a gotinha*/
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+
+}
+
+main .donor p {
+    margin-top: 24px;
+    font-size: 16px;
+
+}
+
+/*Footer*/
+
+footer {
+    margin-top: auto;
+    padding: 16px;
+
+    border: 1px solid #eee; 
+}
+
+/* funcionalidades com javascript */
+section.form {
+    transition: all 300ms;
+}
+
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -90px
+}
